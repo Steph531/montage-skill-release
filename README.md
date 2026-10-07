@@ -11,7 +11,19 @@ Tu filmes, Claude monte. Ce skill pour [Claude Code](https://claude.com/claude-c
 
 Tout tourne sur ton ordinateur : ta vidéo n'est envoyée nulle part.
 
-> **Rejoins les Builders sur [stephenbuild.fr](https://stephenbuild.fr/#rejoindre)** : un mail à chaque nouvelle version du skill et à chaque nouvel outil, et l'accès à toute la bibliothèque. Il suffit de ton mail.
+---
+
+## Rejoins les Builders
+
+Le skill est gratuit. Pour suivre la suite, rejoins la communauté des Builders sur **[stephenbuild.fr](https://stephenbuild.fr/#rejoindre)** :
+
+- un mail à chaque nouvelle version du skill ;
+- les prochains outils dès leur sortie ;
+- l'accès à toute la bibliothèque des Builders.
+
+Il suffit de ton mail.
+
+### → [Rejoindre les Builders](https://stephenbuild.fr/#rejoindre)
 
 ---
 
