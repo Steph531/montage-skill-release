@@ -12,7 +12,7 @@
       "source": "./plugins/monter",
       "description": "Monte une vidéo face caméra : dérushage, sous-titres mot par mot, démonstrations animées, logos, SFX synchronisés.",
       "category": "productivity",
-      "version": "1.0.12"
+      "version": "1.0.13"
     }
   ]
 }

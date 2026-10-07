@@ -1,6 +1,6 @@
 {
   "name": "monter",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Monte une vidéo face caméra : dérushage, sous-titres mot par mot, démonstrations animées, logos, SFX synchronisés.",
   "author": {
     "name": "Steph531"
