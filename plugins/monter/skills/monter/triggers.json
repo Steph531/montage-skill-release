@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "notes": "Suggestions automatiques (mode --auto, et propositions montrées à Claude dans brief.txt). Claude relit et corrige selon le sens : ces règles ne voient que des mots. 'fx' = effet de engine/effects.json. 'text' : '$match' = les mots trouvés, '$phrase' = la phrase entière. Mots-clés comparés sans accents ni casse ; un mot de 5 lettres et plus matche aussi ses dérivés (gratuit -> gratuitement) mais jamais l'inverse.",
+  "defaults": {"min_gap_s": 2.5, "intensity3_gap_s": 5.0, "sfx_lead_s": 0.08, "sfx_rel_db": -12, "cut_zoom": 1.08},
+  "rules": [
+    {"id": "benefit", "fx": "check", "text": "$match", "priority": 3,
+     "fr": ["sans abonnement", "en local", "gratuit", "automatiquement", "à la chaîne", "en un clic", "sans code", "open source", "illimité", "rapide"],
+     "en": ["no subscription", "locally", "for free", "automatically", "in one click", "no code", "open source", "unlimited"]},
+    {"id": "fail", "fx": "cross", "text": "$match", "priority": 3,
+     "fr": ["erreur", "ne marche pas", "raté", "planté", "à éviter", "arnaque", "piège"],
+     "en": ["mistake", "doesn't work", "failed", "crashed", "avoid", "scam", "trap"]},
+    {"id": "stat", "fx": "stat", "priority": 3,
+     "regex": ["(\\d[\\d\\s.,]*)\\s?(%|pour ?cent|k|millions?|milliards?|€|euros?|\\$|dollars?|x|fois|heures?|minutes?|jours?|abonnés)"]},
+    {"id": "cta", "fx": "cta", "text": "Lien en bio 👇", "priority": 4,
+     "fr": ["lien en bio", "lien en description", "abonne-toi", "abonnez-vous", "commente", "suis-moi"],
+     "en": ["link in bio", "subscribe", "follow me", "comment below"]},
+    {"id": "question", "fx": "zoom", "priority": 2, "when": "question"},
+    {"id": "emphasis", "fx": "highlight", "priority": 1,
+     "fr": ["jamais", "toujours", "attention", "secret", "énorme", "incroyable", "dingue", "gratuitement", "moi-même"],
+     "en": ["never", "always", "careful", "secret", "huge", "insane", "crazy"]},
+    {"id": "emoji", "fx": "emoji", "priority": 1,
+     "map": {"argent": "💸", "money": "💸", "idée": "💡", "idea": "💡", "fusée": "🚀", "problème": "⚠️", "temps": "⏱️",
+             "cadeau": "🎁", "feu": "🔥", "cerveau": "🧠", "ordinateur": "💻", "pc": "💻", "téléphone": "📱", "cœur": "❤️"}},
+    {"id": "name", "fx": "card", "text": "$match", "priority": 4, "when": "proper_noun"}
+  ]
+}

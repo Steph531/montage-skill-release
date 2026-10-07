@@ -1,0 +1,424 @@
+{
+  "notes": "Catalogue des effets du skill. 'zone' : top = au-dessus du visage, full = plein écran, captions = agit sur les sous-titres, video = agit sur l'image (ffmpeg). 'sfx' : son choisi au hasard dans le pool de familles « catégorie/tag » de library/manifest.json, sans répéter les 3 derniers (null = aucun). Implémentation : engine/effects.js (overlay) et scripts/pipeline.py (zoom).",
+  "effects": {
+    "card": {
+      "desc": "bloc propre (thème) : nom de produit, idée clé ; emoji optionnel ; *mot* surligné",
+      "params": {
+        "text": "texte court, *mot* surligné",
+        "sub": "sous-titre optionnel",
+        "emoji": "emoji optionnel (nom, voir emoji)",
+        "logo": "nom d'un produit / d'une techno (react, netflix, figma…) : logo officiel téléchargé (Simple Icons)"
+      },
+      "dur": 2.2,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/pop",
+          "transitions/slide"
+        ]
+      }
+    },
+    "check": {
+      "desc": "✓ vert + texte (avantage, argument, étape réussie)",
+      "params": {
+        "text": "2-4 mots",
+        "logo": "nom d'un produit / d'une techno (react, netflix, figma…) : logo officiel téléchargé (Simple Icons)"
+      },
+      "dur": 2.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/check",
+          "ui/pop",
+          "reaction/success"
+        ]
+      }
+    },
+    "cross": {
+      "desc": "✗ rouge + texte (erreur, chose à éviter)",
+      "params": {
+        "text": "2-4 mots",
+        "logo": "nom d'un produit / d'une techno (react, netflix, figma…) : logo officiel téléchargé (Simple Icons)"
+      },
+      "dur": 2.0,
+      "zone": "top",
+      "sfx": {
+        "category": "reaction",
+        "tag": "fail"
+      }
+    },
+    "stat": {
+      "desc": "gros chiffre qui défile + légende",
+      "params": {
+        "value": "ex 10 000 €, 87 %, x3",
+        "label": "légende courte"
+      },
+      "dur": 2.4,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/pop",
+          "business/power-up"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "emoji": {
+      "desc": "emoji 3D (Fluent UI Emoji) qui arrive en rebondissant et flotte",
+      "params": {
+        "emoji": "rocket, fire, idea, warning, check, cross, money, up, down, time, brain, thinking, mindblown, shock, wow, party, eyes, laptop, robot, question"
+      },
+      "dur": 1.6,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/pop",
+          "reaction/boing"
+        ]
+      }
+    },
+    "cta": {
+      "desc": "appel à l'action : texte révélé + flèche tracée vers le vrai bouton de l'appli (rail de droite), anneau qui pulse sur le bouton",
+      "params": {
+        "text": "court, *mot* surligné (ex « *Abonne-toi* pour la partie 2 »)",
+        "target": "follow (défaut), like, comment, save, share, description"
+      },
+      "dur": 3.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh",
+          "ui/pop"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "timer": {
+      "desc": "compte à rebours : surgit en grand quand il est annoncé (« j'ai une minute »), file dans le coin haut gauche et défile jusqu'à la fin ; rouge et pulsé sur les 10 dernières secondes. Les éléments du haut descendent pour lui laisser la place",
+      "params": {
+        "from": "durée en secondes (60 par défaut)"
+      },
+      "dur": 999,
+      "zone": "corner",
+      "sfx": {
+        "pool": [
+          "ui/pop"
+        ]
+      }
+    },
+    "flash": {
+      "desc": "flash blanc (changement de sujet, révélation)",
+      "params": {},
+      "dur": 0.35,
+      "zone": "full",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh",
+          "transitions/glitch"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "highlight": {
+      "desc": "le mot passe en couleur et grossit dans les sous-titres",
+      "params": {},
+      "dur": 0,
+      "zone": "captions",
+      "sfx": null
+    },
+    "zoom": {
+      "desc": "zoom punch sur le visage (phrase choc, question)",
+      "params": {
+        "scale": "1.10 à 1.25, défaut 1.15"
+      },
+      "dur": 1.2,
+      "zone": "video",
+      "sfx": {
+        "category": "transitions",
+        "tag": "whoosh",
+        "max_intensity": 1
+      }
+    },
+    "list": {
+      "desc": "la vidéo rétrécit vers le bas, un panneau en haut affiche les points d'une énumération un par un au moment où ils sont dits",
+      "params": {
+        "title": "titre court optionnel",
+        "items": "[{word, text, at?, n?}] un point par élément énuméré (2-5 mots)"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      },
+      "item_sfx": {
+        "pool": [
+          "ui/pop",
+          "ui/check",
+          "ui/click"
+        ]
+      }
+    },
+    "screen": {
+      "desc": "capture d'un site qui défile dans un cadre de navigateur (illustre un passage sans image : site cité, plateforme, dépôt GitHub, résultats de recherche)",
+      "params": {
+        "url": "page précise à montrer",
+        "mode": "split (défaut : vidéo rétrécie en bas, site en haut) ou full (site plein écran, voix et sous-titres continuent)",
+        "focus": "texte où commencer la capture (optionnel)",
+        "mobile": "défaut true (version mobile, lisible) ; false = version bureau",
+        "scroll": "false = page fixe (montrer un élément précis, avec focus)",
+        "strike": "true = la page est barrée d'un trait rouge (offre disparue, ce qu'il ne faut plus faire), page fixe"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/click",
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "chart": {
+      "desc": "graphique animé (barres qui poussent ou courbe qui se trace) dans le haut, vidéo rétrécie en bas",
+      "params": {
+        "kind": "bar (défaut) ou line",
+        "data": "[{label, value}] 2 à 6 points, valeurs numériques",
+        "unit": "suffixe des valeurs (€, %, k…)",
+        "title": "titre court optionnel",
+        "highlight": "index du point mis en couleur (défaut : le dernier)"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "title": {
+      "desc": "titre plein écran (nouvelle partie, idée clé) : les mots arrivent un par un sur fond assombri",
+      "params": {
+        "text": "2 à 6 mots ; *mot* = surligné en couleur",
+        "sub": "petit sur-titre optionnel (ex Étape 2)",
+        "logo": "nom d'un produit / d'une techno (react, netflix, figma…) : logo officiel téléchargé (Simple Icons)"
+      },
+      "dur": 1.8,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "number": {
+      "desc": "grand chiffre plein écran qui défile jusqu'à sa valeur, avec une légende (le chiffre clé de la vidéo)",
+      "params": {
+        "value": "ex 10 000 €, 87 %, x3",
+        "label": "légende courte"
+      },
+      "dur": 2.4,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "impacts/hit",
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "percent": {
+      "desc": "anneau qui se remplit jusqu'au pourcentage, chiffre qui défile au centre (plein écran)",
+      "params": {
+        "value": "0 à 100 (ex 87 ou \"87 %\")",
+        "label": "légende courte"
+      },
+      "dur": 2.6,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "impacts/hit"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "hook": {
+      "desc": "texte d'accroche dès la 1re image (miniature) ; calque à part : ne chasse pas les effets du haut et n'est pas chassé",
+      "params": {
+        "text": "5 à 10 mots, intrigant, *mots* en rouge"
+      },
+      "dur": 3.0,
+      "zone": "hook",
+      "sfx": null
+    },
+    "icon": {
+      "desc": "icône au trait qui se dessine (remplace l'emoji), légende optionnelle",
+      "params": {
+        "name": "check, cross, warning, clock, bulb, rocket, lock, key, bug, code, chat, bell, up, down, money, eye, fire, star, heart, plus, arrow, video",
+        "text": "légende courte optionnelle (*mot* surligné)"
+      },
+      "dur": 1.8,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/pop",
+          "ui/click"
+        ],
+        "max_intensity": 1
+      }
+    },
+    "splash": {
+      "desc": "transition liquide plein écran : gouttes qui montent et fusionnent, couvrent l'écran (titre optionnel), repartent par le haut",
+      "params": {
+        "text": "titre optionnel (*mot* surligné)",
+        "sub": "sur-titre optionnel"
+      },
+      "dur": 1.4,
+      "zone": "full",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh"
+        ],
+        "max_intensity": 3
+      }
+    },
+    "blob": {
+      "desc": "forme liquide jaune qui ondule derrière un mot fort plein écran, avec éclaboussure",
+      "params": {
+        "text": "1 à 3 mots",
+        "burst": "false pour retirer l'éclaboussure"
+      },
+      "dur": 1.6,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "impacts/hit",
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      }
+    },
+    "scene": {
+      "desc": "scène d'illustration générée (maquette d'interface animée) en haut, vidéo rétrécie en bas : montre ce dont on parle sans rush",
+      "params": {
+        "kind": "code | terminal | chat | compare",
+        "title": "titre de la fenêtre (nom de fichier, appli)",
+        "lines": "code : lignes de code ; terminal : [{cmd: true, text}] ou texte de sortie",
+        "highlight": "code : {line (index), color (red|green), note}",
+        "messages": "chat : [{from: user|ai, text}]",
+        "before / after": "compare : {label, text}",
+        "steps": "code : [{at?, word, line, color? (green/red), note?}] : chaque ligne s'allume quand elle est dite"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "ui/keyboard"
+        ]
+      },
+      "sfx_kinds": {
+        "code": {
+          "pool": [
+            "ui/keyboard"
+          ]
+        },
+        "terminal": {
+          "pool": [
+            "ui/keyboard"
+          ]
+        },
+        "chat": {
+          "pool": [
+            "ui/pop"
+          ]
+        },
+        "compare": {
+          "pool": [
+            "transitions/whoosh"
+          ],
+          "max_intensity": 2
+        }
+      }
+    },
+    "diagram": {
+      "desc": "schéma animé (relations) en haut, vidéo rétrécie en bas : les cases apparaissent quand elles sont dites, les flèches se tracent, un point parcourt le flux",
+      "params": {
+        "kind": "flow (chaîne A → B → C) | hub (centre + satellites, 1er item = centre) | cycle (boucle) | tree (1er item = racine, les autres = branches)",
+        "items": "[{at?, word, text, emoji?}] 2 à 6 cases, 1 à 3 mots",
+        "title": "titre court optionnel",
+        "highlight": "index de la case mise en valeur"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/whoosh"
+        ],
+        "max_intensity": 2
+      },
+      "item_sfx": {
+        "pool": [
+          "ui/pop",
+          "ui/click"
+        ]
+      }
+    },
+    "site": {
+      "desc": "maquette de site qui évolue au fil de la parole (vidéo rétrécie en bas) : HTML brut au départ, chaque étape le transforme quand son mot est dit. Montre ce que fait le CSS, le responsive, le JavaScript",
+      "params": {
+        "title": "adresse dans la barre (mon-site.fr)",
+        "heading": "titre de la page (Mon site)",
+        "button": "texte du bouton (Contact)",
+        "start": "actions déjà appliquées à l'apparition, ex [\"color\", \"font\", \"flex\"]",
+        "steps": "[{at?, word, do}] ; do : color, font, flex, grid, mobile, desktop, menu, form, click, anim"
+      },
+      "dur": 4.0,
+      "zone": "top",
+      "sfx": {
+        "pool": [
+          "transitions/slide",
+          "ui/pop"
+        ],
+        "max_intensity": 2
+      },
+      "step_sfx": {
+        "default": {
+          "pool": [
+            "ui/pop"
+          ]
+        },
+        "menu": {
+          "pool": [
+            "ui/click"
+          ]
+        },
+        "form": {
+          "pool": [
+            "ui/click"
+          ]
+        },
+        "click": {
+          "pool": [
+            "ui/click"
+          ]
+        },
+        "mobile": {
+          "pool": [
+            "transitions/whoosh"
+          ],
+          "max_intensity": 2
+        },
+        "desktop": {
+          "pool": [
+            "transitions/whoosh"
+          ],
+          "max_intensity": 2
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "montage-skill",
+  "owner": {
+    "name": "Steph531"
+  },
+  "metadata": {
+    "description": "Montage automatique de vidéos face caméra (TikTok, Reels, Shorts) avec Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "monter",
+      "source": "./plugins/monter",
+      "description": "Monte une vidéo face caméra : dérushage, sous-titres mot par mot, démonstrations animées, logos, SFX synchronisés.",
+      "category": "productivity",
+      "version": "1.0.12"
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "version": 1,
+  "intensity_scale": {
+    "1": "discret, peut se répéter",
+    "2": "marqué, à utiliser avec parcimonie",
+    "3": "fort, 1 à 2 fois par vidéo maximum"
+  },
+  "rules": [
+    "Un seul son fort (intensité 3) par séquence de quelques secondes.",
+    "Ne jamais utiliser le même fichier deux fois de suite : alterner pop_01..05, mouse_01..03.",
+    "Placer le son 1 à 3 images avant le visuel qu'il accompagne.",
+    "Garder le volume des SFX 6 à 12 dB sous la voix."
+  ],
+  "categories": {
+    "transitions": {
+      "role": "Passer d'un plan à un autre ou animer un mouvement d'écran",
+      "use_when": [
+        "coupe/changement de plan",
+        "élément qui glisse ou balaie l'écran",
+        "changement de sujet"
+      ]
+    },
+    "ui": {
+      "role": "Accompagner l'apparition ou l'interaction d'un élément d'interface",
+      "use_when": [
+        "texte, logo ou icône qui apparaît",
+        "clic, saisie, notification",
+        "validation d'une étape"
+      ]
+    },
+    "impacts": {
+      "role": "Appuyer un moment fort",
+      "use_when": [
+        "phrase choc",
+        "révélation",
+        "chute d'un élément à l'écran",
+        "fin de section"
+      ]
+    },
+    "tension": {
+      "role": "Créer attente, suspense ou urgence",
+      "use_when": [
+        "montée avant une révélation",
+        "compte à rebours",
+        "surprise soudaine"
+      ]
+    },
+    "reaction": {
+      "role": "Commenter l'action : humour, réussite, échec",
+      "use_when": [
+        "gag ou moment gênant",
+        "résultat positif",
+        "résultat négatif"
+      ]
+    },
+    "business": {
+      "role": "Parler d'argent, de gain ou de progression",
+      "use_when": [
+        "prix, vente, revenu",
+        "bonus ou amélioration",
+        "niveau supérieur"
+      ]
+    },
+    "divers": {
+      "role": "Sons à usage ponctuel",
+      "use_when": [
+        "capture, photo, screenshot"
+      ]
+    }
+  },
+  "sounds": {
+    "transitions/fast_woosh": {
+      "role": "coupe rapide",
+      "intensity": 1,
+      "tags": [
+        "whoosh",
+        "swipe",
+        "cut"
+      ]
+    },
+    "transitions/woosh": {
+      "role": "transition standard",
+      "intensity": 2,
+      "tags": [
+        "whoosh",
+        "slide"
+      ]
+    },
+    "transitions/deep_woosh": {
+      "role": "grande transition lente",
+      "intensity": 3,
+      "tags": [
+        "whoosh",
+        "deep",
+        "cinematic"
+      ]
+    },
+    "transitions/glitch": {
+      "role": "coupe tech / effet numérique",
+      "intensity": 2,
+      "tags": [
+        "glitch",
+        "digital",
+        "tech"
+      ]
+    },
+    "transitions/reverse_symbal": {
+      "role": "accent cymbale",
+      "intensity": 2,
+      "tags": [
+        "cymbal",
+        "accent"
+      ],
+      "note": "Le son décroît (cymbale normale), il n'est pas inversé malgré son nom. À vérifier."
+    },
+    "ui/pop_01": {
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    "ui/pop_02": {
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    "ui/pop_03": {
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    "ui/pop_04": {
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    "ui/pop_05": {
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    "ui/ding": {
+      "role": "notification / validation",
+      "intensity": 1,
+      "tags": [
+        "ding",
+        "notification",
+        "check"
+      ]
+    },
+    "ui/keyboard": {
+      "role": "saisie clavier",
+      "intensity": 1,
+      "tags": [
+        "typing",
+        "keyboard",
+        "code"
+      ]
+    },
+    "ui/mouse_01": {
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ],
+      "note": "Découpe provisoire à revoir."
+    },
+    "ui/mouse_02": {
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ],
+      "note": "Découpe provisoire à revoir."
+    },
+    "ui/mouse_03": {
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ],
+      "note": "Découpe provisoire à revoir."
+    },
+    "impacts/hit": {
+      "role": "impact standard",
+      "intensity": 2,
+      "tags": [
+        "hit",
+        "punch"
+      ]
+    },
+    "impacts/boom": {
+      "role": "impact lourd",
+      "intensity": 3,
+      "tags": [
+        "boom",
+        "bass",
+        "drop"
+      ]
+    },
+    "impacts/stinger": {
+      "role": "révélation dramatique",
+      "intensity": 3,
+      "tags": [
+        "stinger",
+        "reveal"
+      ]
+    },
+    "impacts/car_crash": {
+      "role": "catastrophe / gag de choc",
+      "intensity": 3,
+      "tags": [
+        "crash",
+        "disaster"
+      ]
+    },
+    "tension/riser": {
+      "role": "montée avant révélation",
+      "intensity": 2,
+      "tags": [
+        "riser",
+        "build-up"
+      ]
+    },
+    "tension/shock": {
+      "role": "surprise soudaine",
+      "intensity": 3,
+      "tags": [
+        "shock",
+        "jump"
+      ]
+    },
+    "tension/heartbeat": {
+      "role": "suspense",
+      "intensity": 2,
+      "tags": [
+        "heartbeat",
+        "suspense"
+      ]
+    },
+    "tension/ticking_clock": {
+      "role": "compte à rebours / urgence",
+      "intensity": 2,
+      "tags": [
+        "clock",
+        "countdown",
+        "urgency"
+      ]
+    },
+    "reaction/success": {
+      "role": "réussite",
+      "intensity": 2,
+      "tags": [
+        "success",
+        "win"
+      ]
+    },
+    "reaction/fail": {
+      "role": "échec",
+      "intensity": 2,
+      "tags": [
+        "fail",
+        "lose"
+      ]
+    },
+    "reaction/boing": {
+      "role": "rebond comique",
+      "intensity": 1,
+      "tags": [
+        "boing",
+        "comic"
+      ]
+    },
+    "reaction/cricket": {
+      "role": "silence gênant",
+      "intensity": 1,
+      "tags": [
+        "cricket",
+        "awkward"
+      ]
+    },
+    "business/cash": {
+      "role": "argent / vente",
+      "intensity": 2,
+      "tags": [
+        "cash",
+        "money",
+        "sale"
+      ]
+    },
+    "business/power_up": {
+      "role": "bonus / niveau supérieur",
+      "intensity": 2,
+      "tags": [
+        "power-up",
+        "boost",
+        "level"
+      ]
+    },
+    "divers/camera_shutter": {
+      "role": "capture / screenshot",
+      "intensity": 1,
+      "tags": [
+        "camera",
+        "photo",
+        "screenshot"
+      ]
+    }
+  }
+}

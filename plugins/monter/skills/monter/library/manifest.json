@@ -1,0 +1,494 @@
+{
+  "assets": [
+    {
+      "file": "sfx/business/cash.wav",
+      "type": "sfx",
+      "category": "business",
+      "duration": 2.057,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "argent / vente",
+      "intensity": 2,
+      "tags": [
+        "cash",
+        "money",
+        "sale"
+      ]
+    },
+    {
+      "file": "sfx/business/power_up.wav",
+      "type": "sfx",
+      "category": "business",
+      "duration": 3.641,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "bonus / niveau supérieur",
+      "intensity": 2,
+      "tags": [
+        "power-up",
+        "boost",
+        "level"
+      ]
+    },
+    {
+      "file": "sfx/divers/camera_shutter.wav",
+      "type": "sfx",
+      "category": "divers",
+      "duration": 3.017,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "capture / screenshot",
+      "intensity": 1,
+      "tags": [
+        "camera",
+        "photo",
+        "screenshot"
+      ]
+    },
+    {
+      "file": "sfx/impacts/boom.wav",
+      "type": "sfx",
+      "category": "impacts",
+      "duration": 2.151,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "impact lourd",
+      "intensity": 3,
+      "tags": [
+        "boom",
+        "bass",
+        "drop"
+      ]
+    },
+    {
+      "file": "sfx/impacts/car_crash.wav",
+      "type": "sfx",
+      "category": "impacts",
+      "duration": 3.548,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "catastrophe / gag de choc",
+      "intensity": 3,
+      "tags": [
+        "crash",
+        "disaster"
+      ]
+    },
+    {
+      "file": "sfx/impacts/hit.wav",
+      "type": "sfx",
+      "category": "impacts",
+      "duration": 3.171,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "impact standard",
+      "intensity": 2,
+      "tags": [
+        "hit",
+        "punch"
+      ]
+    },
+    {
+      "file": "sfx/impacts/stinger.wav",
+      "type": "sfx",
+      "category": "impacts",
+      "duration": 1.774,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "révélation dramatique",
+      "intensity": 3,
+      "tags": [
+        "stinger",
+        "reveal"
+      ]
+    },
+    {
+      "file": "sfx/reaction/boing.wav",
+      "type": "sfx",
+      "category": "reaction",
+      "duration": 0.892,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "rebond comique",
+      "intensity": 1,
+      "tags": [
+        "boing",
+        "comic"
+      ]
+    },
+    {
+      "file": "sfx/reaction/cricket.wav",
+      "type": "sfx",
+      "category": "reaction",
+      "duration": 2.061,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "silence gênant",
+      "intensity": 1,
+      "tags": [
+        "cricket",
+        "awkward"
+      ]
+    },
+    {
+      "file": "sfx/reaction/fail.wav",
+      "type": "sfx",
+      "category": "reaction",
+      "duration": 0.534,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "échec",
+      "intensity": 2,
+      "tags": [
+        "fail",
+        "lose"
+      ]
+    },
+    {
+      "file": "sfx/reaction/success.wav",
+      "type": "sfx",
+      "category": "reaction",
+      "duration": 3.553,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "réussite",
+      "intensity": 2,
+      "tags": [
+        "success",
+        "win"
+      ]
+    },
+    {
+      "file": "sfx/tension/heartbeat.wav",
+      "type": "sfx",
+      "category": "tension",
+      "duration": 1.901,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "suspense",
+      "intensity": 2,
+      "tags": [
+        "heartbeat",
+        "suspense"
+      ]
+    },
+    {
+      "file": "sfx/tension/riser.wav",
+      "type": "sfx",
+      "category": "tension",
+      "duration": 3.172,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "montée avant révélation",
+      "intensity": 2,
+      "tags": [
+        "riser",
+        "build-up"
+      ]
+    },
+    {
+      "file": "sfx/tension/shock.wav",
+      "type": "sfx",
+      "category": "tension",
+      "duration": 1.34,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "surprise soudaine",
+      "intensity": 3,
+      "tags": [
+        "shock",
+        "jump"
+      ]
+    },
+    {
+      "file": "sfx/tension/ticking_clock.wav",
+      "type": "sfx",
+      "category": "tension",
+      "duration": 2.009,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "compte à rebours / urgence",
+      "intensity": 2,
+      "tags": [
+        "clock",
+        "countdown",
+        "urgency"
+      ]
+    },
+    {
+      "file": "sfx/transitions/deep_woosh.wav",
+      "type": "sfx",
+      "category": "transitions",
+      "duration": 3.768,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "grande transition lente",
+      "intensity": 3,
+      "tags": [
+        "whoosh",
+        "deep",
+        "cinematic"
+      ]
+    },
+    {
+      "file": "sfx/transitions/fast_woosh.wav",
+      "type": "sfx",
+      "category": "transitions",
+      "duration": 0.836,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "coupe rapide",
+      "intensity": 1,
+      "tags": [
+        "whoosh",
+        "swipe",
+        "cut"
+      ]
+    },
+    {
+      "file": "sfx/transitions/glitch.wav",
+      "type": "sfx",
+      "category": "transitions",
+      "duration": 4.444,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "coupe tech / effet numérique",
+      "intensity": 2,
+      "tags": [
+        "glitch",
+        "digital",
+        "tech"
+      ]
+    },
+    {
+      "file": "sfx/transitions/reverse_symbal.wav",
+      "type": "sfx",
+      "category": "transitions",
+      "duration": 1.047,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "accent cymbale",
+      "intensity": 2,
+      "tags": [
+        "cymbal",
+        "accent"
+      ]
+    },
+    {
+      "file": "sfx/transitions/woosh.wav",
+      "type": "sfx",
+      "category": "transitions",
+      "duration": 1.487,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "transition standard",
+      "intensity": 2,
+      "tags": [
+        "whoosh",
+        "slide"
+      ]
+    },
+    {
+      "file": "sfx/ui/ding.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 2.186,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "notification / validation",
+      "intensity": 1,
+      "tags": [
+        "ding",
+        "notification",
+        "check"
+      ]
+    },
+    {
+      "file": "sfx/ui/keyboard.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 3.803,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "saisie clavier",
+      "intensity": 1,
+      "tags": [
+        "typing",
+        "keyboard",
+        "code"
+      ]
+    },
+    {
+      "file": "sfx/ui/mouse_01.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.276,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ]
+    },
+    {
+      "file": "sfx/ui/mouse_02.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.356,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ]
+    },
+    {
+      "file": "sfx/ui/mouse_03.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.272,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "clic souris",
+      "intensity": 1,
+      "tags": [
+        "click",
+        "mouse"
+      ]
+    },
+    {
+      "file": "sfx/ui/pop_01.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.057,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    {
+      "file": "sfx/ui/pop_02.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.072,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    {
+      "file": "sfx/ui/pop_03.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.068,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    {
+      "file": "sfx/ui/pop_04.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.054,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    },
+    {
+      "file": "sfx/ui/pop_05.wav",
+      "type": "sfx",
+      "category": "ui",
+      "duration": 0.038,
+      "source_url": "",
+      "author": "",
+      "license": "CC0",
+      "source": "freesound.org",
+      "role": "apparition d'un élément",
+      "intensity": 1,
+      "tags": [
+        "pop",
+        "appear"
+      ]
+    }
+  ]
+}
